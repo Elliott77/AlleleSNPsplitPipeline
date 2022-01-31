@@ -3,12 +3,9 @@ I run this pipeline on the University of Utah's CHPC system using the SLURM sche
 
 # Prerequisites
 samtools
-
 bedtools
-
 bowtie2
-
-trimmomatic.
+trimmomatic
 
 Install the software MAPS locally. See the MAPS page for the required dependancies (https://github.com/ijuric/MAPS).
 I also have the program SNPsplit installed locally (https://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/). SNPsplit requires a locally samtools installation.
