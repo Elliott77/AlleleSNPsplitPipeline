@@ -3,8 +3,11 @@ I run this pipeline on the University of Utah's CHPC system using the SLURM sche
 
 # Prerequisites
 samtools
+
 bedtools
+
 bowtie2
+
 trimmomatic.
 
 Install the software MAPS locally. See the MAPS page for the required dependancies (https://github.com/ijuric/MAPS).
