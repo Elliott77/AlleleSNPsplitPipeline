@@ -1,4 +1,6 @@
 # SNPsplitPipeline
+To search for parent-of-origin effects on gene expression, our lab has studied hybrid mice. To study parent-of-origin effects on chromotin confirmation and gene-regulationn, we have studied these same hybrid mice with PLAC-seq—a HiC derivitive. The variants that distinguish the maternally and paternally inheritied DNA alow us to identify contacts that differ with mouse strain and parent-of-origin. This pipeline is guild to align hybrid mouse PLAC-seq data . . .
+
 I run this pipeline on the University of Utah's CHPC system using the SLURM scheduler and make use of 'module' to load programs including trimmomatic, bowtie2, samtools and bedtools.
 
 # Prerequisites
