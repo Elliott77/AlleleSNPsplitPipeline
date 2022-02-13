@@ -3,15 +3,22 @@ To search for parent-of-origin and strain effects on gene expression, our lab ha
 
 # Prerequisites
 samtools
+
 bedtools
+
 bowtie2
+
 trimmomatic
+
+SNPsplit
+
 MAPS
 
 Install the MAPS pipeline locally. See the MAPS page for the required dependancies (https://github.com/ijuric/MAPS).
 Also install SNPsplit locally (https://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/). SNPsplit requires a locally samtools installation.
 
-These data come from PLAC-seq experiments run with tissue from C57/Cast hybrid mice bred to allow maternal and paternal RNA-seq reads to be distinguished after alignment. Trim and align PLAC-seq FASTQ files. I've set the parameters for 150 bp paired-end reads. Modify the script as needed.
+# Hybrid Animals
+These data come from PLAC-seq experiments run with tissue from Strain A / Strain B hybrid animals bred to allow maternal and paternal RNA-seq reads to be distinguished after alignment. Trim and align PLAC-seq FASTQ files. I've set the parameters for 150 bp paired-end reads. Modify the script as needed for read length and adaptors.
 Use known SNPS to sort reads into separate Strain A and Strain B FASTQ files. Use a bowtie alignment index wiht N masked Variants. Pass the separate FASTQ files to the MAPS pipeline to call significant cis contacts for each allele seperatly. MAPS parameters can be changed in the script 'run_pipeline_cl.sh'. Move run_pipeline_cl.sh to ~/MAPS/bin/. This will ultimately yield the data needed to visualize loops for the two alleles.
 Requres a variant N-masked bowtie2 index file for alignment. Use bowtie2-build to create
 The MAPS pipeline requires of ChIP-seq peaks BED file from analgous samples.
