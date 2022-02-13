@@ -10,10 +10,10 @@ bowtie2
 trimmomatic
 MAPS
 
-Install the software MAPS locally. See the MAPS page for the required dependancies (https://github.com/ijuric/MAPS).
-I also have the program SNPsplit installed locally (https://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/). SNPsplit requires a locally samtools installation.
+Install the MAPS pipeline locally. See the MAPS page for the required dependancies (https://github.com/ijuric/MAPS).
+Also install SNPsplit locally (https://www.bioinformatics.babraham.ac.uk/projects/SNPsplit/). SNPsplit requires a locally samtools installation.
 
-These data come from PLAC-seq experiments run with tissue from C57/Cast hybrid mice bred to allow maternally and paternally inherited reads to be distinguished. Trim and align PLAC-seq FASTQ files. I've set the parameters for 150 bp paired-end reads.
-Use known C57/Cast SNPS to sort reads into separate Cast and C57 FASTQ files. Use a bowtie alignment index wiht N masked CAST Variants. Pass the separate FASTQ files to the MAPS pipeline to call significant cis contacts for each allele seperatly. MAPS parameters can be changed in the shell script 'run_pipeline_cl.sh'. This will ultimately give us the data we need to visualize loops that differ between the two alleles.
-Requres a Cast variant N-masked bowtie2 index file for alignment
-MAPS requires of ChIP-seq peaks BED file from analgous samples.
+These data come from PLAC-seq experiments run with tissue from C57/Cast hybrid mice bred to allow maternal and paternal RNA-seq reads to be distinguished after alignment. Trim and align PLAC-seq FASTQ files. I've set the parameters for 150 bp paired-end reads.
+Use known C57/Cast SNPS to sort reads into separate Cast and C57 FASTQ files. Use a bowtie alignment index wiht N masked Variants. Pass the separate FASTQ files to the MAPS pipeline to call significant cis contacts for each allele seperatly. MAPS parameters can be changed in the shell script 'run_pipeline_cl.sh'. This will ultimately give us the data we need to visualize loops for the two alleles.
+Requres a variant N-masked bowtie2 index file for alignment. Use bowtie2-build
+The MAPS pipeline requires of ChIP-seq peaks BED file from analgous samples.
